@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -236,7 +236,7 @@ iomanip
 assert.h
 -
 
-/home/IN/vudi0418/programmierung/programmiersprachen-aufgabe-1/source/tests.cpp
+/home/sophie/Dokumente/Programmiersprachen/programmiersprachen-aufgabe-1/source/tests.cpp
 catch.hpp
 -
 

@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sophie/Dokumente/Programmiersprachen/programmiersprachen-aufgabe-1/source/aufgabe1-3.cpp
+iostream
+-
+
