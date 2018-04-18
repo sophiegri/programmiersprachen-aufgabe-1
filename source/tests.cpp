@@ -88,23 +88,28 @@ TEST_CASE ("fract" ,"[Gleitkommazahl]") //3 Testdurchläufe, um zu prüfen ob au
 
 //Aufgabe 1.12
 
-float zylinder (float hoehe, float radius) {
-  
-  float volumen;
-  float oberflaeche;
+float volumen (float hoehe, float radius) {
 
-  volumen = M_PI * (radius*radius) * hoehe; 
-  oberflaeche = (2* M_PI * (radius*radius)) + (2* M_PI * radius* hoehe);
-
-  return volumen; //wie kann ich 2 Dinge zurückgeben? Mit einer Ausgabe auf der Konsole?
-  //return oberflaeche; 
+  return (M_PI * (radius*radius) * hoehe);
 }
 
-TEST_CASE ("zylinder" ,"[Oberfläche]" "[Volumen]")
+TEST_CASE ("Zylindervolumen" , "[Volumen]")
 {
-REQUIRE (zylinder (2,4) == Approx(100.531).epsilon(0.001));
-REQUIRE (zylinder (1.5,0.5) == Approx(1.178).epsilon(0.001)); //epsilon gibt die Nachkommastellen an
+REQUIRE (volumen (2,4) == Approx(100.531).epsilon(0.001));
+REQUIRE (volumen (1.5,0.5) == Approx(1.178).epsilon(0.001)); //epsilon gibt die Nachkommastellen an
 }
+
+float oberflaeche (float hoehe, float radius) {
+
+  return (2* M_PI * (radius*radius)) + (2* M_PI * radius* hoehe);
+}
+
+TEST_CASE ("Zylinderoberflaeche" , "[Oberflaeche]")
+{
+REQUIRE (oberflaeche (2,4) == Approx(150.796).epsilon(0.001));
+REQUIRE (oberflaeche (1.5,0.5) == Approx(6.283).epsilon(0.001)); //epsilon gibt die Nachkommastellen an
+}
+
 
 //Aufgabe 1.13
 
@@ -125,7 +130,7 @@ TEST_CASE ("factorial" ,"[Fakultät]")
 {
   REQUIRE (factorial(3) == 6);
   REQUIRE (factorial(9) == 362880);
-  REQUIRE (factorial(0) == 1); //warum gibt es hier einen Fehler aus? 
+  REQUIRE (factorial(0) == 1);
   REQUIRE (factorial(1) == 1);
 }
 
@@ -142,7 +147,7 @@ int binomial (int n, int k) {
     }
 }
 
-TEST_CASE ("binomial" ,"[Fakultät]" "[]") //Fehler in der Ausgabe der Tests, warum? 
+TEST_CASE ("binomial" ,"[Fakultät]" "[Binominalkoeffizient]") 
 {
   REQUIRE (binomial(4,2) == 6);
   REQUIRE (binomial(5,3) == 10);
@@ -150,24 +155,31 @@ TEST_CASE ("binomial" ,"[Fakultät]" "[]") //Fehler in der Ausgabe der Tests, wa
 
 //Aufgabe 1.15
 
-bool is_prime (int a) {
+bool is_prime (int a) { //Funktion, um herauszufinden was eine Primzahl ist. Sprich welche Zahlen lassen sich nur durch sich und 1 teilen.
   int m; 
   int rest;  
 
-  for (m=2; m<a; m++) {
-    rest = a % m; 
-    if (rest == 0) {
-      std::cout <<"Die Eingabe ist keine Primzahl\n";   
-      return false;   
-    }    
+  if (a<2) {
+    return false; //Da wir davon ausgehen, dass 1 keine Primzahl ist, starten wir bei 2
   }
-  return true;      
+  else {
+
+    for (m=2; m<a; m++) { //wir starten bei 2, da a%0=undefiniert und a%1=1
+      rest = a % m; 
+      if (rest == 0) {
+        std::cout <<"Die Eingabe ist keine Primzahl\n";   
+        return false;   
+      }    
+    }
+    return true;
+  }      
 }
 
 TEST_CASE ("is_prime" ,"[Primfaktor]")
 {
 REQUIRE (is_prime(3) == true);
 REQUIRE (is_prime(10) == false);
+REQUIRE (is_prime(1) == false);
 }
 
 //Aufgabe 1.16

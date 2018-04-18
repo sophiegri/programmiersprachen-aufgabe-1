@@ -137,6 +137,19 @@ tests/fast:
 .PHONY : tests/fast
 
 #=============================================================================
+# Target rules for targets named mileToKilometer
+
+# Build rule for target.
+mileToKilometer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mileToKilometer
+.PHONY : mileToKilometer
+
+# fast build rule for target.
+mileToKilometer/fast:
+	$(MAKE) -f source/CMakeFiles/mileToKilometer.dir/build.make source/CMakeFiles/mileToKilometer.dir/build
+.PHONY : mileToKilometer/fast
+
+#=============================================================================
 # Target rules for targets named aufgabe1-3
 
 # Build rule for target.
@@ -159,6 +172,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... helloworld"
 	@echo "... tests"
+	@echo "... mileToKilometer"
 	@echo "... aufgabe1-3"
 .PHONY : help
 
