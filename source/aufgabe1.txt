@@ -1,0 +1,122 @@
+//Aufgabe 1.4
+
+int main ()
+
+{
+ int a = 9;
+ bool b = false; 
+ char c = 'a'; 
+ double d = 1.3; 
+ int const two = 2; 
+ double e = a/two; 
+
+ two = d; 
+
+ return = 0; 
+}
+
+In diesem Programm gibt es die verschiedene Typen. 
+Der Datentyp richtet sich nach der Größe des Wertes und beinhaltet zum Beispiel: 
+ganze Zahlen (int), Gleitkommazahlen (float, double), Buchstaben (char) oder Wahrheitswerte (bool).
+
+Die Werte die diesen Datentypen zugewiesen werden stehen hinter der Zuweisung, die mit "=" markiert ist. 
+Je nach Datentyp sind unterschiedliche Werte und Größen der Werte zulässig. Einem "bool" darf beispielsweise nur ein Wahrheitswert zugewiesen werden und zB. keine Zahl.
+
+Die Variablen sind von einem bestimmten Datentyp und sind der Name ihres Wertes.
+Jede definierte Variable bekommt für ihren Gültigkeitsbereich (Lebensdauer) einen Platz im Speicher von dem sie jederzeit abgerufen werden kann.
+
+Das Wort "const" zeigt an, dass die Variable "two" vom Datentyp "int" mit dem Wert "2" konstant und nicht veränderbar ist.  
+Der Wert dieser Variable kann somit nicht mehr durch eine Zuweisung (während des Gültigkeitsbereiches der Variable) geändert werden. 
+
+Mit einer Typkonvertierung kann der ursprüngliche Datentyp einer Variable in einen anderen Datentyp geändert werden. 
+Das Problem bei einer Typkonvertierung ist, dass Informationen bei der Umwandlung verloren gehen könnten zB. bei der Konvertierung von einem "double" zu einem "int" gehen die Nachkommastellen verloren.  
+
+
+//Aufgabe 1.5 
+
+Initialisierung:
+Bei einer Initialisierung wird eine Variable direkt beim Erstellen mit einem Wert gesetzt. Der Speicher wird direkt angefordert. 
+Beispiel: 
+int a = 5; 
+
+Zuweisung:
+Bei einer Zuweisung wird der Wert der Variable erst nachträglich gesetzt bzw. zugewiesen. 
+Beispiel: 
+int a; 
+a=5; 
+
+Der Unterschied besteht also darin, wann den Variablen der Wert zugeteilt wird und somit der Speicher angelegt wird. 
+
+//Aufgabe 1.6
+
+Eine Deklaration ist eine Bekanntgabe an das System über die Existenz eines Datentypes, Funktion oder Variable. 
+Hier werden außer dem Namen und dem Typen keine Details genannt. 
+
+Beispiel Funktion: 
+int berechneY;
+
+Beispiel Klassen: 
+class X;
+
+Beispiel Variablen: 
+int x; 
+
+
+
+Eine Definition legt den Aufbau eines Typs, den Rumpf und die Implementierung einer Funktion und den Speicherort einer Variable für das dazugehörige Objekt fest. 
+
+Beispiel Funktion: 
+int berechneY (int a, int b) 
+{
+}
+
+Beispiel Klassen: 
+class X 
+{
+    public: 
+    X ();
+};
+
+Beispiel Variablen: 
+main ()
+{
+    int X;
+}
+
+
+
+//Aufgabe 1.7 
+
+# include < iostream >
+
+int var = 3;
+double sum (double a, double b)
+    {
+    return a + b ;
+    }
+
+int square (int var)
+{
+    return var * var;
+}
+
+int main()
+{
+    for ( int i = 0; i != 100; ++ i ) {
+        std :: cout << " i ^2 = " << square ( i ) << ’\ n ’;
+        std :: cout << " i + i = " << sum (i , i ) << ’\ n ’;
+}
+    return 0;
+}
+
+Der Gültigkeitsbereich (scope) ist der Bereich eines Programms, in dem auf einen Namen Bezug genommen werden kann. 
+Der Gültigkeitsbereich einer Variablen erstreckt sich bis zum Ende der Anweisung, innerhalb der sie definiert ist. 
+Die Signatur einer Funktion besteht aus dem Funktionsnamen und ihren Parametern.
+
+int-var: ist eine Variable, die in dem gesamten Quellcode gültig ist (Zeile 92-110).
+double sum: Die Signatur dieser Funktion ist der Name "sum" und die Parameter die dieser Funktion übergeben werden: zwei double Werte. Der Rückgabetyp ist ein double Wert. 
+double a: ist eine Variable des Datentypes double und ist nur innerhalb der Funktion "sum" gültig (Zeile 93-96).
+double b: ist eine Variable des Datentypes double und ist ebenso nur innerhalb der Funktion "sum" gültig (Zeile 93-96).
+int square: Die Signatur dieser Funktion ist der Eingabeparameter int "var" und der Name "square". Der Rückgabetyp ist ein int. 
+int main: ist die main-Methode der nichts übergeben wird. Diese Methode gibt einen int-Wert zurück. 
+int i: ist nur innrhalb der main-Methode gültig (Zeile 105-108).

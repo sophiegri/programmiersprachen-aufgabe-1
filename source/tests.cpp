@@ -182,8 +182,6 @@ REQUIRE (is_prime(10) == false);
 REQUIRE (is_prime(1) == false);
 }
 
-//Aufgabe 1.16
-
 
 int main (int argc , char* argv [])
 {

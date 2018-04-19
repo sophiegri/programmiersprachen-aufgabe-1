@@ -1,0 +1,31 @@
+//Aufgabe 1.17
+
+C++: Ist eine objektorientierte, kompilierte Programmiersprache. 
+Quellcode: Der Quellcode oder Programmtext, ist das geschriebene Programm, dass von einem Menschen verstanden und gelesen werden kann.
+Compiler: Ein Compiler übersetzt den Quellcode in einen Maschinencode, der von einer Maschine gelesen und ausgeführt werden kann.
+Linker: Ein Linker ist ein Programm, dass die einzelnen Teile eines Programms (Objektcode, Bibliotheken von C++) miteinander verbindet und zu einem ausführbaren Programm zusammenfasst. 
+Objektcode: Der Objektcode ist die Ausgabe eines Compilers, die als Eingabe für den Linker dient. Dies nutzt der Linker um eine ausführbare Datei zu erzeugen. 
+Ausführbare Datei: Dies ist ein Programm, das bereit ist auf einem Computer ausgeführt zu werden. 
+main(): Dies ist der Einstiegspunkt in das Programm. Die main kann andere Funktionen ausführen lassen. 
+#include: Ist eine Anweisung an den Computer, Hilfsmittel aus anderen Dateien verfügbar zu machen.
+Kommentar:Sind Notizen in dem Quellcode, die nur für den Menschen lesbar sind. Der Compiler liest die Kommentare nicht ein. Sie werden durch // gekennzeichnet.
+Header: Dies ist eine Datei, die Deklarationen erhält und dazu dient, den verschiedenen Teilen eines Programms Schnitstellen zur gemeinsamen Nutzung zur Verfügung zu stellen. 
+Programm: Dies ist der Code, der von einem Computer ausführbar ist.
+Ausgabe: Die Ausgabe sind Werte, die durch eine Berechnung erzeugt werden. Zum Beispiel kann eine Funktion ein Ergebnis liefern oder eine Zeile mit Zeichen kann auf den Bildschirm ausgegeben werden.
+std::cout : Dies ist die Standard-Ausgabe. "character output".
+std::cin : Standard "character input" ist der Standardeingabestream.
+<< : Dies ist der Ausgabeoperator, der die auszudrückenden Werte einliest.
+>> : Dies sind Eingabeoperationen die die Eingabe so einlesen wie es der Datentyp der Variable verlangt. Bsp: cin >> age; lies einen Integer ein
+Funktion: Dies ist eine benannte Codeeinheit, die aus verschiedenen Teilen eines Programms ausgerufen werden kann. 
+Funktionssignatur: Die Signatur einer Funktion umfasst ihren Namen und die Eingabeparameter.
+Deklaration: Dies ist die Angabe eines Namens und des Datentypes in einem Programm.
+Definition: Die Definition setzt zusätzlich zur Deklaration noch den Speicher für das Objekt/Variable fest. In der Definition sind alle notwendigen Informationen enthalten.
+Typ: Ein Typ definiert die möglichen Werte und Operationen für ein Objekt. 
+Typkonvertierung: Mit einer Typkonvertierung kann der ursprüngliche Datentyp einer Variable in einen anderen Datentyp geändert werden. 
+Variable: Eine Variable ist ein benanntes Objekt eines Typs das ein Wert enthalt (sofern es Initialisiert wurde).
+Name: Der Name ist die Bezeichnung des angelegten Objektes und seines Speicherplatzes um es im Speicher leichter abzurufen. 
+Wert: Der Wert ist eine Anzahl an Bits im Speicher, die gemäß des Typs für ein Objekt gesichert werden.
+Initialisierung: Die Initialisierung weist einem Objekt seinen Anfangswert zu beim Anlegen fest.
+Zuweisung: Die Zuweisung weist einem bereits initialisiertem Objekt einen (neuen) Wert zu.
+const: Das Schlüsselwort const bedeutet, dass der Wert, mit der die Variable initialisiert wurde, konstant und nicht veränderbar innerhalb des Gültigkeitsbereichs ist.
+Gültigkeitsbereich: Der Bereich eines Programmtexts, in dem auf einen Namen Bezug genommen werden kann. 
